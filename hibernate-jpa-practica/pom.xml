@@ -6,21 +6,22 @@
 	<artifactId>hibernate-jpa-practica</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 
+	<!-- Dependencias -->
 	<dependencies>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>5.1.0.Final</version>
+			<version>5.5.5.Final</version>
 			<type>pom</type>
 		</dependency>
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>6.0.0.Alpha7</version>
+			<version>5.5.5.Final</version>
 			<type>pom</type>
 		</dependency>
-
+		   		
 		<dependency>
 			<groupId>javax.persistence</groupId>
 			<artifactId>persistence-api</artifactId>
@@ -30,12 +31,15 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.12</version>
+			<version>8.0.19</version>
 			<scope>runtime</scope>
+			
 		</dependency>
 	</dependencies>
-
+	
+	<!-- Builds -->
 	<build>
+		<!-- Plugins -->
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -49,4 +53,9 @@
 		</plugins>
 	</build>
 
+	<!-- Repositorios -->
+	<repositories>
+    	
+  	</repositories>
+  	  
 </project>

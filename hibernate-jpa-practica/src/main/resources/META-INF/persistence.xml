@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+             http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+
+  <persistence-unit name="Persistencia_Practica">
+  
+  	<!--  Acá se deben poner las clases -->
+  	<class>model.Empleado</class>
+  	
+  	
+    <properties>
+    	<!-- Configuracion MYSQL -->
+        <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+        <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/hibernate_jpa_practica?serverTimezone=UTC" />
+        <property name="javax.persistence.jdbc.user" value="root" />
+        <property name="javax.persistence.jdbc.password" value="toor5127-" />
+        
+        <!-- Propiedades del hibernate-->
+        <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" /> <!-- Aca se debe especificar el dialect de la bd que se va a utlizar -->
+        <property name="hibernate.hbm2ddl.auto" value="create" /> <!-- como queremos que hibernate nos haga la conexion con bd, las opciones son: create, create-drop, update, validate. con create crea automaticamente la tabla si no existe en la bd, validate verifica si la tabla existe pero no crea -->
+        <property name="hibernate.show_sql" value="true" />
+        <property name="hibernate.format_sql" value="true" />
+    </properties>
+  </persistence-unit>
+
+</persistence>
